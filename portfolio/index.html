@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<!--
+  ============================================================
+  GOVIND PATIDAR — PERSONAL PORTFOLIO & LIVE PROJECT SHOWCASE
+  index.html | B.Tech CSE (Cyber Security) | SATI Vidisha
+  ============================================================
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── THEME INITIALIZATION (Zero-FOUC) ── -->
+  <script>
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      else document.documentElement.setAttribute('data-theme', 'dark');
+    } catch (e) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+
+  <!-- ── SEO & META ── -->
+  <title>Govind Patidar — B.Tech CSE (Cyber Security) | Developer &amp; Creative Designer</title>
+  <meta name="description" content="Portfolio of Govind Patidar, B.Tech Computer Science &amp; Engineering (Cyber Security) student at SATI Vidisha. Explore interactive project demos: Home Medicine Portal, CityGens CRM, Twilio/ElevenLabs Voice AI with MCP, and Cybersecurity Data Integrity." />
+  <link rel="canonical" href="https://patidargovind.github.io/portfolio/" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- ── OPEN GRAPH ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Govind Patidar — Web Developer, Cyber Security &amp; AI Integration" />
+  <meta property="og:description" content="Explore live interactive project demos: Home Medicine Portal, CityGens CRM Platform, ElevenLabs &amp; Twilio Voice Agent with MCP, and Cybersecurity research." />
+  <meta property="og:image" content="assets/images/profile.jpg" />
+
+  <!-- ── FAVICON ── -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+  <!-- ── GOOGLE FONTS ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- ── STYLESHEET ── -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ── JSON-LD PERSON SCHEMA ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Govind Patidar",
+    "jobTitle": "B.Tech CSE (Cyber Security) Student & Lead Developer",
+    "birthDate": "2007-05-06",
+    "description": "First-year Computer Science & Engineering student specializing in Cyber Security at SATI Vidisha, with hands-on experience building web applications and integrating AI APIs into working products.",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Samrat Ashok Technological Institute (SATI)",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Vidisha",
+        "addressRegion": "Madhya Pradesh",
+        "addressCountry": "IN"
+      }
+    },
+    "knowsAbout": ["Cyber Security", "Web Development", "Python", "ElevenLabs API", "Twilio API", "Model Context Protocol (MCP)", "Data Integrity", "Graphic Design", "Video Editing"]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- ── SKIP TO CONTENT ── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ════════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════════ -->
+  <header class="navbar" role="banner">
+    <nav class="navbar__inner container" aria-label="Primary navigation">
+
+      <a class="navbar__logo" href="#hero" aria-label="Govind Patidar — back to top">
+        <span class="navbar__logo-initials" aria-hidden="true">GP</span>
+        <span class="navbar__logo-name">Govind Patidar</span>
+      </a>
+
+      <ul class="navbar__links" id="nav-links" role="list">
+        <li><a class="navbar__link" href="#about">About</a></li>
+        <li><a class="navbar__link" href="#education">Education</a></li>
+        <li><a class="navbar__link" href="#skills">Skills</a></li>
+        <li><a class="navbar__link" href="#projects">Projects &amp; Demos</a></li>
+        <li><a class="navbar__link" href="#achievements">Achievements</a></li>
+        <li><a class="navbar__link" href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="navbar__controls">
+        <!-- Live AI Assistant button -->
+        <button class="btn btn--sm btn--ai-sparkle" id="ai-chat-btn" aria-label="Open AI Assistant" title="Ask Govind's AI Assistant">
+          <span class="ai-sparkle-dot"></span>
+          <span>Ask AI</span>
+        </button>
+
+        <button class="btn-icon theme-toggle" id="theme-toggle" aria-label="Switch to light theme" aria-pressed="false" title="Toggle light / dark mode">
+          <svg class="icon icon--sun" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon icon--moon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <button class="btn-icon hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger__line" aria-hidden="true"></span>
+          <span class="hamburger__line" aria-hidden="true"></span>
+          <span class="hamburger__line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-label="Mobile navigation menu">
+      <ul class="mobile-menu__links" role="list">
+        <li><a class="mobile-menu__link" href="#about">About</a></li>
+        <li><a class="mobile-menu__link" href="#education">Education</a></li>
+        <li><a class="mobile-menu__link" href="#skills">Skills</a></li>
+        <li><a class="mobile-menu__link" href="#projects">Projects &amp; Demos</a></li>
+        <li><a class="mobile-menu__link" href="#achievements">Achievements</a></li>
+        <li><a class="mobile-menu__link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ── MAIN CONTENT ── -->
+  <main id="main-content">
+
+    <!-- ════════════════════════════════════════════
+         SECTION 1 — HERO
+    ════════════════════════════════════════════ -->
+    <section class="section hero" id="hero" aria-label="Introduction">
+      <div class="hero__blobs" aria-hidden="true">
+        <div class="hero__blob hero__blob--1"></div>
+        <div class="hero__blob hero__blob--2"></div>
+        <div class="hero__blob hero__blob--3"></div>
+      </div>
+      <div class="hero__grid-overlay" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <div class="hero__badge-row">
+            <span class="domain-badge domain-badge--major"><span class="badge-dot"></span> Major: Graphic Design</span>
+            <span class="domain-badge domain-badge--minor">Minor: Video Edits</span>
+          </div>
+
+          <p class="hero__greeting">Hello, I'm</p>
+          <h1 class="hero__name">Govind Patidar</h1>
+
+          <p class="hero__role">
+            B.Tech CSE (Cyber Security)
+            <span class="hero__role-divider" aria-hidden="true"> · </span>
+            Full-Stack Developer
+            <span class="hero__role-divider" aria-hidden="true"> · </span>
+            Voice AI &amp; MCP Integrator
+          </p>
+
+          <p class="hero__tagline">"Building Secure, High-Performance Systems with Code, Voice AI &amp; Creative Design."</p>
+
+          <p class="hero__bio">
+            First-year Computer Science &amp; Engineering student specializing in Cyber Security at <strong>SATI Vidisha (7.58 CGPA)</strong>. Hands-on experience building full-stack applications, automated outbound voice agents using <strong>ElevenLabs, Twilio &amp; Model Context Protocol (MCP)</strong>, and award-winning research on AI data integrity.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">
+              <span>Explore Projects &amp; Live Demos</span>
+              <svg class="btn__icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+            <a class="btn btn--outline" href="#contact">
+              <svg class="btn__icon btn__icon--left" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <span>Get In Touch</span>
+            </a>
+          </div>
+
+          <div class="hero__socials" role="list" aria-label="Social and contact links">
+            <a class="social-link" href="https://github.com/patidargovind" aria-label="GitHub profile" target="_blank" rel="noopener noreferrer" role="listitem">
+              <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+              </svg>
+            </a>
+            <a class="social-link" href="https://linkedin.com" aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer" role="listitem">
+              <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a class="social-link" href="#contact" aria-label="Send email directly" role="listitem">
+              <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal reveal--delay-1">
+          <div class="profile-frame">
+            <!-- Real professional photograph loaded locally -->
+            <img
+              class="profile-frame__img"
+              src="assets/images/profile.jpg"
+              alt="Portrait of Govind Patidar"
+              width="320"
+              height="400"
+              loading="eager"
+            />
+            <div class="profile-frame__ring" aria-hidden="true"></div>
+            <div class="profile-frame__badge">
+              <span class="badge-ping"></span>
+              <span>Open to Opportunities</span>
+            </div>
+          </div>
+
+          <div class="terminal-card" aria-hidden="true">
+            <div class="terminal-card__bar">
+              <span class="terminal-card__dot terminal-card__dot--red"></span>
+              <span class="terminal-card__dot terminal-card__dot--yellow"></span>
+              <span class="terminal-card__dot terminal-card__dot--green"></span>
+              <span class="terminal-card__title">bash — satiview@govind</span>
+            </div>
+            <div class="terminal-card__body">
+              <p><span class="terminal-card__prompt">$</span> <span class="terminal-card__text">whoami</span></p>
+              <p class="terminal-card__output">govind-patidar [B.Tech CSE Cyber Security]</p>
+              <p><span class="terminal-card__prompt">$</span> <span class="terminal-card__text">cat stack.json</span></p>
+              <p class="terminal-card__output">{"core": ["Python", "Twilio", "ElevenLabs", "MCP"], "cgpa": 7.58}</p>
+              <p><span class="terminal-card__prompt">$</span> <span class="terminal-card__text">status</span></p>
+              <p class="terminal-card__output terminal-card__output--accent">Ready for Engineering Team &amp; Projects <span class="terminal-card__cursor">&#9611;</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <span class="hero__scroll-text">Scroll Down</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════════
+         SECTION 2 — ABOUT ME
+    ════════════════════════════════════════════ -->
+    <section class="section about" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Profile &amp; Background</p>
+          <h2 class="section-title" id="about-heading">About Me</h2>
+          <p class="section-subtitle">Developer, Cybersecurity Student &amp; Creative Visual Designer</p>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <p class="about__para">
+              I'm <strong>Govind Patidar</strong> (Born 06/05/2007), a first-year Computer Science &amp; Engineering student specializing in <strong>Cyber Security</strong> at <strong>Samrat Ashok Technological Institute (SATI)</strong>, Vidisha, MP.
+            </p>
+            <p class="about__para">
+              I combine a solid foundation in programming and secure system design with practical, real-world exposure to full-stack development, voice-AI automation, and technical research. I spearheaded the development of a production CRM platform for CityGens Organization as Lead Developer, and engineered automated outbound voice agents combining ElevenLabs, Twilio, and the Model Context Protocol (MCP).
+            </p>
+            <p class="about__para">
+              Recognized for award-winning presentation work after winning the <strong>Technovision Championship Trophy</strong> for research on AI &amp; data integrity in cybersecurity. Beyond engineering, I bring strong creative leadership with a major in <strong>Graphic Design</strong> and minor in <strong>Video Editing</strong>, having served on the SATI Media &amp; Photography team and represented at the state-level in <strong>Kabaddi</strong>.
+            </p>
+
+            <div class="quick-facts-grid">
+              <div class="fact-card">
+                <span class="fact-card__num">7.58</span>
+                <span class="fact-card__label">B.Tech CGPA</span>
+              </div>
+              <div class="fact-card">
+                <span class="fact-card__num">4+</span>
+                <span class="fact-card__label">Core Projects</span>
+              </div>
+              <div class="fact-card">
+                <span class="fact-card__num">1st</span>
+                <span class="fact-card__label">Technovision Trophy</span>
+              </div>
+              <div class="fact-card">
+                <span class="fact-card__num">State</span>
+                <span class="fact-card__label">Kabaddi Player</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__card reveal reveal--delay-1">
+            <div class="info-card">
+              <h3 class="info-card__title">Domain Specialization</h3>
+              
+              <div class="info-card__item">
+                <div class="info-card__icon" aria-hidden="true">🎨</div>
+                <div>
+                  <p class="info-card__label">Major Domain</p>
+                  <p class="info-card__value">Graphic Design &amp; Digital Visuals</p>
+                </div>
+              </div>
+
+              <div class="info-card__item">
+                <div class="info-card__icon" aria-hidden="true">🎬</div>
+                <div>
+                  <p class="info-card__label">Minor Domain</p>
+                  <p class="info-card__value">Video Editing &amp; Visual Effects</p>
+                </div>
+              </div>
+
+              <div class="info-card__item">
+                <div class="info-card__icon" aria-hidden="true">🔐</div>
+                <div>
+                  <p class="info-card__label">Engineering Major</p>
+                  <p class="info-card__value">Cyber Security (B.Tech CSE)</p>
+                </div>
+              </div>
+
+              <div class="info-card__item">
+                <div class="info-card__icon" aria-hidden="true">🎂</div>
+                <div>
+                  <p class="info-card__label">Date of Birth</p>
+                  <p class="info-card__value">06 May 2007</p>
+                </div>
+              </div>
+
+              <hr class="info-card__divider" />
+
+              <h4 class="info-card__subtitle">Core Competencies</h4>
+              <ul class="competencies-list" role="list">
+                <li><span class="comp-dot"></span> Secure System Architecture &amp; Data Integrity</li>
+                <li><span class="comp-dot"></span> Outbound Voice Automation (ElevenLabs &amp; Twilio)</li>
+                <li><span class="comp-dot"></span> Model Context Protocol (MCP) Integration</li>
+                <li><span class="comp-dot"></span> CRM Platform &amp; Workflow Tracking</li>
+                <li><span class="comp-dot"></span> High-Pressure Team Leadership &amp; Athletics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════════
+         SECTION 3 — EDUCATION QUALIFICATION
+    ════════════════════════════════════════════ -->
+    <section class="section education" id="education" aria-labelledby="education-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Academic Track Record</p>
+          <h2 class="section-title" id="education-heading">Education Qualification</h2>
+          <p class="section-subtitle">Verified academic credentials from high school to B.Tech</p>
+        </div>
+
+        <div class="education__timeline reveal">
+          <!-- B.Tech -->
+          <div class="edu-card edu-card--featured">
+            <div class="edu-card__header">
+              <div class="edu-card__meta">
+                <span class="edu-card__badge">Undergraduate</span>
+                <span class="edu-card__year">2025 – 2029</span>
+              </div>
+              <div class="edu-card__score">
+                <span class="score-val">7.58</span>
+                <span class="score-type">CGPA</span>
+              </div>
+            </div>
+            <h3 class="edu-card__degree">B.Tech, Computer Science &amp; Engineering (Cyber Security)</h3>
+            <p class="edu-card__inst">Samrat Ashok Technological Institute (SATI), Vidisha, MP</p>
+            <p class="edu-card__desc">
+              Focusing on ethical hacking, network defense, cryptographic data integrity, voice AI automation, and secure software engineering. First year completed with 7.58 CGPA and championship win at SATI Technovision.
+            </p>
+          </div>
+
+          <!-- Class XII -->
+          <div class="edu-card">
+            <div class="edu-card__header">
+              <div class="edu-card__meta">
+                <span class="edu-card__badge">Senior Secondary</span>
+                <span class="edu-card__year">2024</span>
+              </div>
+              <div class="edu-card__score">
+                <span class="score-val">77.4%</span>
+                <span class="score-type">Score</span>
+              </div>
+            </div>
+            <h3 class="edu-card__degree">Class XII (Higher Secondary)</h3>
+            <p class="edu-card__inst">Madhya Pradesh Board of Secondary Education</p>
+            <p class="edu-card__desc">
+              Rigorous science and mathematics curriculum, fostering strong analytical reasoning, problem solving, and computational thinking.
+            </p>
+          </div>
+
+          <!-- Class X -->
+          <div class="edu-card">
+            <div class="edu-card__header">
+              <div class="edu-card__meta">
+                <span class="edu-card__badge">Secondary</span>
+                <span class="edu-card__year">2022</span>
+              </div>
+              <div class="edu-card__score">
+                <span class="score-val">79.6%</span>
+                <span class="score-type">Score</span>
+              </div>
+            </div>
+            <h3 class="edu-card__degree">Class X (High School)</h3>
+            <p class="edu-card__inst">Madhya Pradesh Board of Secondary Education</p>
+            <p class="edu-card__desc">
+              Graduated with distinction (79.6%) with active involvement in school sports, science exhibitions, and computer applications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════════
+         SECTION 4 — SKILLS
+    ════════════════════════════════════════════ -->
+    <section class="section skills" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Technical &amp; Personal Competencies</p>
+          <h2 class="section-title" id="skills-heading">Skills &amp; Technologies</h2>
+          <p class="section-subtitle">Categorized skills directly aligned with resume facts</p>
+        </div>
+
+        <div class="skills__grid">
+          <!-- Programming -->
+          <div class="skill-card reveal">
+            <div class="skill-card__header">
+              <span class="skill-card__icon" aria-hidden="true">💻</span>
+              <h3 class="skill-card__title">Programming Languages</h3>
+            </div>
+            <ul class="skill-card__badges" role="list">
+              <li class="badge badge--proficient">Python <span class="badge__note">(Intermediate)</span></li>
+              <li class="badge">C <span class="badge__note">(Foundational)</span></li>
+              <li class="badge badge--learning">JavaScript <span class="badge__note">(Learning)</span></li>
+            </ul>
+          </div>
+
+          <!-- Web Development -->
+          <div class="skill-card reveal reveal--delay-1">
+            <div class="skill-card__header">
+              <span class="skill-card__icon" aria-hidden="true">🌐</span>
+              <h3 class="skill-card__title">Web Development</h3>
+            </div>
+            <ul class="skill-card__badges" role="list">
+              <li class="badge">HTML5</li>
+              <li class="badge">CSS3</li>
+              <li class="badge">Responsive Design</li>
+              <li class="badge">DOM Manipulation</li>
+              <li class="badge">REST APIs</li>
+            </ul>
+          </div>
+
+          <!-- AI & API Integration -->
+          <div class="skill-card reveal reveal--delay-2">
+            <div class="skill-card__header">
+              <span class="skill-card__icon" aria-hidden="true">🤖</span>
+              <h3 class="skill-card__title">APIs &amp; Voice AI Automation</h3>
+            </div>
+            <ul class="skill-card__badges" role="list">
+              <li class="badge badge--highlight">Twilio API</li>
+              <li class="badge badge--highlight">ElevenLabs API</li>
+              <li class="badge badge--highlight">Model Context Protocol (MCP)</li>
+              <li class="badge">Google Gemini API</li>
+            </ul>
+          </div>
+
+          <!-- Cybersecurity & Tools -->
+          <div class="skill-card reveal">
+            <div class="skill-card__header">
+              <span class="skill-card__icon" aria-hidden="true">🔐</span>
+              <h3 class="skill-card__title">Cybersecurity &amp; DevOps</h3>
+            </div>
+            <ul class="skill-card__badges" role="list">
+              <li class="badge">Linux Basics</li>
+              <li class="badge">Data Integrity &amp; Hashing</li>
+              <li class="badge">API Authentication</li>
+              <li class="badge">Git</li>
+              <li class="badge">GitHub</li>
+              <li class="badge">VS Code</li>
+            </ul>
+          </div>
+
+          <!-- Creative Domains -->
+          <div class="skill-card reveal reveal--delay-1">
+            <div class="skill-card__header">
+              <span class="skill-card__icon" aria-hidden="true">🎨</span>
+              <h3 class="skill-card__title">Creative &amp; Visual Design</h3>
+            </div>
+            <ul class="skill-card__badges" role="list">
+              <li class="badge badge--proficient">Graphic Design (Major)</li>
+              <li class="badge">Digital Poster Creation</li>
+              <li class="badge badge--proficient">Video Editing (Minor)</li>
+              <li class="badge">Visual Effects (VFX)</li>
+              <li class="badge">Social Media Media</li>
+            </ul>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="skill-card reveal reveal--delay-2">
+            <div class="skill-card__header">
+              <span class="skill-card__icon" aria-hidden="true">🤝</span>
+              <h3 class="skill-card__title">Soft Skills &amp; Athletics</h3>
+            </div>
+            <ul class="skill-card__badges" role="list">
+              <li class="badge">Teamwork &amp; Collaboration</li>
+              <li class="badge">Leadership</li>
+              <li class="badge">Strategic Thinking</li>
+              <li class="badge">Discipline</li>
+              <li class="badge">Performing Under Pressure</li>
+              <li class="badge badge--highlight">State-Level Kabaddi</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════════
+         SECTION 5 — PROJECTS & INTERACTIVE DEMOS
+    ════════════════════════════════════════════ -->
+    <section class="section projects" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Real Projects · Working Demos</p>
+          <h2 class="section-title" id="projects-heading">Projects &amp; Interactive Demos</h2>
+          <p class="section-subtitle">Click "Live Demo" on any card to test the real interactive application right here</p>
+        </div>
+
+        <div class="projects__grid">
+
+          <!-- ── PROJECT 1: Home Medicine Portal (From Resume) ── -->
+          <article class="project-card reveal" aria-label="Project: Home Medicine Portal">
+            <div class="project-card__thumbnail">
+              <img class="project-card__img" src="assets/images/project-medicine.jpg" alt="Home Medicine Portal pharmaceutical tracking interface" width="400" height="220" loading="lazy" />
+              <div class="project-card__tag-pill">Responsive Web App</div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="status-badge status-badge--live">● Live Working Demo</span>
+              </div>
+              <h3 class="project-card__title">Home Medicine Portal</h3>
+              <p class="project-card__desc">
+                Developed a responsive web application for managing household medicines, tracking expiry dates with visual color-coded warnings, dynamic shelf-life calculations, and eco-friendly safe-disposal guidance for environmental health.
+              </p>
+              <ul class="project-card__tags" role="list" aria-label="Technologies used">
+                <li class="tag">HTML5</li>
+                <li class="tag">CSS3</li>
+                <li class="tag">JavaScript</li>
+                <li class="tag">LocalStorage</li>
+                <li class="tag">Healthcare UI</li>
+              </ul>
+              <div class="project-card__actions">
+                <button class="btn btn--sm btn--primary btn-demo-trigger" data-demo="medicine" aria-label="Launch Home Medicine Portal Interactive Demo">
+                  <svg class="btn__icon btn__icon--left" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  Live Demo
+                </button>
+                <a class="btn btn--sm btn--outline btn-code-link" href="https://github.com/patidargovind?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="View source code on GitHub Repositories">
+                  <svg class="btn__icon btn__icon--left" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                  <span>Code ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── PROJECT 2: CityGens CRM Platform (From Resume) ── -->
+          <article class="project-card reveal reveal--delay-1" aria-label="Project: CityGens CRM Platform">
+            <div class="project-card__thumbnail">
+              <img class="project-card__img" src="assets/images/project-crm.jpg" alt="CityGens CRM enterprise analytics and workflow platform" width="400" height="220" loading="lazy" />
+              <div class="project-card__tag-pill">Lead Developer</div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="status-badge status-badge--live">● Live Working Demo</span>
+              </div>
+              <h3 class="project-card__title">CRM Platform (CityGens)</h3>
+              <p class="project-card__desc">
+                Led development of a comprehensive CRM platform for CityGens Organization as Lead Developer. Architected user data management pipelines, dynamic lead-to-fulfillment workflow tracking, customer communication logs, and SLA service delivery metrics.
+              </p>
+              <ul class="project-card__tags" role="list" aria-label="Technologies used">
+                <li class="tag">Lead Developer</li>
+                <li class="tag">Data Architecture</li>
+                <li class="tag">Workflow Tracking</li>
+                <li class="tag">Kanban Engine</li>
+                <li class="tag">Analytics</li>
+              </ul>
+              <div class="project-card__actions">
+                <button class="btn btn--sm btn--primary btn-demo-trigger" data-demo="crm" aria-label="Launch CityGens CRM Platform Interactive Demo">
+                  <svg class="btn__icon btn__icon--left" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  Live Demo
+                </button>
+                <a class="btn btn--sm btn--outline btn-code-link" href="https://github.com/patidargovind?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="View source code on GitHub Repositories">
+                  <svg class="btn__icon btn__icon--left" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                  <span>Code ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── PROJECT 3: Automated Outbound Voice Agent + MCP (From Resume) ── -->
+          <article class="project-card reveal reveal--delay-2" aria-label="Project: Automated Outbound Voice Agent with MCP">
+            <div class="project-card__thumbnail">
+              <img class="project-card__img" src="assets/images/project-voice-agent.jpg" alt="Voice AI telephony sound studio equipment" width="400" height="220" loading="lazy" />
+              <div class="project-card__tag-pill">Voice AI + MCP</div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="status-badge status-badge--live">● Live Working Demo</span>
+              </div>
+              <h3 class="project-card__title">Voice Agent &amp; MCP Bridge</h3>
+              <p class="project-card__desc">
+                Engineered an automated outbound voice agent using <strong>ElevenLabs API</strong> for high-fidelity speech synthesis and <strong>Twilio API</strong> for telephony. Integrated the <strong>Model Context Protocol (MCP)</strong> for secure server handshakes, JSON-RPC tools, and token authentication.
+              </p>
+              <ul class="project-card__tags" role="list" aria-label="Technologies used">
+                <li class="tag">Python</li>
+                <li class="tag">ElevenLabs API</li>
+                <li class="tag">Twilio API</li>
+                <li class="tag">Model Context Protocol (MCP)</li>
+                <li class="tag">Web Speech</li>
+              </ul>
+              <div class="project-card__actions">
+                <button class="btn btn--sm btn--primary btn-demo-trigger" data-demo="voice" aria-label="Launch Automated Voice Agent & MCP Demo">
+                  <svg class="btn__icon btn__icon--left" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  Live Demo
+                </button>
+                <a class="btn btn--sm btn--outline btn-code-link" href="https://github.com/patidargovind?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="View source code on GitHub Repositories">
+                  <svg class="btn__icon btn__icon--left" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                  <span>Code ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── PROJECT 4: Technovision Cyber Security Data Integrity (From Resume) ── -->
+          <article class="project-card reveal" aria-label="Project: AI Data Integrity and Cybersecurity Engine">
+            <div class="project-card__thumbnail">
+              <img class="project-card__img" src="assets/images/project-cybersecurity.jpg" alt="Cybersecurity network operations center and cryptographic verification" width="400" height="220" loading="lazy" />
+              <div class="project-card__tag-pill">Championship Research</div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="status-badge status-badge--live">● Live Working Demo</span>
+              </div>
+              <h3 class="project-card__title">AI &amp; Data Integrity Verifier</h3>
+              <p class="project-card__desc">
+                Award-winning project from SATI Technovision Paper Presentation. Implements cryptographic SHA-256 data hashing, avalanche effect verification, and machine learning anomaly scoring to detect malicious data tampering in critical systems.
+              </p>
+              <ul class="project-card__tags" role="list" aria-label="Technologies used">
+                <li class="tag">Cyber Security</li>
+                <li class="tag">SHA-256 Crypto</li>
+                <li class="tag">AI / ML Anomaly</li>
+                <li class="tag">Data Integrity</li>
+              </ul>
+              <div class="project-card__actions">
+                <button class="btn btn--sm btn--primary btn-demo-trigger" data-demo="security" aria-label="Launch AI Data Integrity Verifier Demo">
+                  <svg class="btn__icon btn__icon--left" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  Live Demo
+                </button>
+                <a class="btn btn--sm btn--outline btn-code-link" href="https://github.com/patidargovind?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="View source code on GitHub Repositories">
+                  <svg class="btn__icon btn__icon--left" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                  <span>Code ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── PROJECT 5: Creative Showcase (Graphic Design Major & Video Edits Minor) ── -->
+          <article class="project-card reveal reveal--delay-1" aria-label="Project: Creative Design & Video Editing Showcase">
+            <div class="project-card__thumbnail">
+              <img class="project-card__img" src="assets/images/project-creative.jpg" alt="Graphic design tablet and video editing timeline monitor" width="400" height="220" loading="lazy" />
+              <div class="project-card__tag-pill">Major &amp; Minor Domains</div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="status-badge status-badge--live">● Interactive Gallery</span>
+              </div>
+              <h3 class="project-card__title">Creative Design &amp; VFX Showcase</h3>
+              <p class="project-card__desc">
+                High-impact visual productions created as Volunteer on the SATI Media &amp; Photography Team. Includes promotional posters for college orientation, digital typography art, and edited event videos with custom visual effects and motion transitions.
+              </p>
+              <ul class="project-card__tags" role="list" aria-label="Technologies used">
+                <li class="tag">Graphic Design</li>
+                <li class="tag">Digital Posters</li>
+                <li class="tag">Video Editing</li>
+                <li class="tag">Visual Effects</li>
+                <li class="tag">SATI Media Team</li>
+              </ul>
+              <div class="project-card__actions">
+                <button class="btn btn--sm btn--primary btn-demo-trigger" data-demo="creative" aria-label="View Creative Design & Video Editing Showcase">
+                  <svg class="btn__icon btn__icon--left" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  View Showcase
+                </button>
+                <a class="btn btn--sm btn--outline btn-code-link" href="https://github.com/patidargovind?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="View design methodology and assets on GitHub">
+                  <svg class="btn__icon btn__icon--left" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                  <span>Code ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── PROJECT 6: Google Gemini AI Professional Assistant ── -->
+          <article class="project-card reveal reveal--delay-2" aria-label="Project: AI Integration and Google Gemini Studio Platform">
+            <div class="project-card__thumbnail">
+              <img class="project-card__img" src="assets/images/sati-campus.jpg" alt="Google Gemini AI and engineering campus technology" width="400" height="220" loading="lazy" />
+              <div class="project-card__tag-pill">Gemini Platform</div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="status-badge status-badge--live">● Live AI Engine</span>
+              </div>
+              <h3 class="project-card__title">Gemini AI Assistant &amp; Generator</h3>
+              <p class="project-card__desc">
+                Integrated Google Gemini API free platform capabilities with dynamic prompt framing. Test context-aware response synthesis, prompt generation for cybersecurity audit inquiries, and interactive Q&amp;A about Govind's technical capabilities.
+              </p>
+              <ul class="project-card__tags" role="list" aria-label="Technologies used">
+                <li class="tag">Google Gemini API</li>
+                <li class="tag">LLM Prompting</li>
+                <li class="tag">AI Chat</li>
+                <li class="tag">Async Fetch</li>
+              </ul>
+              <div class="project-card__actions">
+                <button class="btn btn--sm btn--primary btn-demo-trigger" data-demo="gemini" aria-label="Launch Google Gemini AI Assistant Demo">
+                  <svg class="btn__icon btn__icon--left" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  Test AI
+                </button>
+                <a class="btn btn--sm btn--outline btn-code-link" href="https://github.com/patidargovind?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="View source code on GitHub Repositories">
+                  <svg class="btn__icon btn__icon--left" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                  <span>Code ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── PROJECT 7: AI Mail & Application Generator ── -->
+          <article class="project-card reveal" aria-label="Project: AI Mail &amp; Application Generator">
+            <div class="project-card__thumbnail">
+              <img class="project-card__img" src="assets/images/project-mail-generator.jpg" alt="AI Mail and Application Generator studio interface" width="400" height="220" loading="lazy" />
+              <div class="project-card__tag-pill">Full-Stack AI Studio</div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="status-badge status-badge--live">● Live Working Demo</span>
+              </div>
+              <h3 class="project-card__title">AI Mail &amp; Application Generator</h3>
+              <p class="project-card__desc">
+                High-precision communication studio powered by <strong>Google Gemini API</strong> for crafting tailored emails, job applications, cover letters, and formal correspondence. Features multi-tone adaptive synthesis, smart context refinement, zero-fabrication verification, and instant export.
+              </p>
+              <ul class="project-card__tags" role="list" aria-label="Technologies used">
+                <li class="tag">React 19</li>
+                <li class="tag">TypeScript</li>
+                <li class="tag">Google Gemini API</li>
+                <li class="tag">Vite &amp; Express</li>
+                <li class="tag">Tailwind CSS</li>
+                <li class="tag">Zero-Fabrication</li>
+              </ul>
+              <div class="project-card__actions">
+                <button class="btn btn--sm btn--primary btn-demo-trigger" data-demo="mailgen" aria-label="Launch AI Mail Generator Interactive Demo">
+                  <svg class="btn__icon btn__icon--left" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  Live Demo
+                </button>
+                <a class="btn btn--sm btn--outline btn-code-link" href="https://github.com/patidargovind/EMAIL-GENERATOR" data-repo="EMAIL-GENERATOR" target="_blank" rel="noopener noreferrer" aria-label="View Mail Generator repository on GitHub">
+                  <svg class="btn__icon btn__icon--left" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                  <span>Code ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════════
+         SECTION 6 — ACHIEVEMENTS & EXTRACURRICULARS
+    ════════════════════════════════════════════ -->
+    <section class="section achievements" id="achievements" aria-labelledby="achievements-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Honors &amp; Milestones</p>
+          <h2 class="section-title" id="achievements-heading">Past Experience &amp; Achievements</h2>
+          <p class="section-subtitle">Recognitions across research, technical leadership, creative arts, and athletics</p>
+        </div>
+
+        <div class="achievements__grid">
+
+          <!-- 1. Technovision Championship Trophy -->
+          <article class="achievement-card reveal" aria-label="Achievement: SATI Technovision Championship">
+            <div class="achievement-card__visual">
+              <img class="achievement-card__img" src="assets/images/trophy.jpg" alt="Championship trophy won at Technovision Paper Presentation" width="280" height="200" loading="lazy" />
+            </div>
+            <div class="achievement-card__body">
+              <div class="achievement-card__badge">
+                <span aria-hidden="true">🏆</span> Championship Trophy Winner
+              </div>
+              <h3 class="achievement-card__title">Technovision Paper Presentation (SATI)</h3>
+              <p class="achievement-card__desc">
+                Won the coveted championship trophy at the Technovision Paper Presentation at Samrat Ashok Technological Institute (SATI) for an award-winning academic paper on <strong>Data Integrity, AI, and Machine Learning in Cybersecurity</strong>. Demonstrated how AI models can proactively flag tampering in sensitive distributed audit logs.
+              </p>
+            </div>
+          </article>
+
+          <!-- 2. State-Level Kabaddi -->
+          <article class="achievement-card reveal reveal--delay-1" aria-label="Achievement: State-Level Kabaddi">
+            <div class="achievement-card__visual">
+              <img class="achievement-card__img" src="assets/images/kabaddi.jpg" alt="Athletic competition representing State-level Kabaddi" width="280" height="200" loading="lazy" />
+            </div>
+            <div class="achievement-card__body">
+              <div class="achievement-card__badge">
+                <span aria-hidden="true">🎖️</span> State Representative
+              </div>
+              <h3 class="achievement-card__title">State-Level Kabaddi Athlete</h3>
+              <p class="achievement-card__desc">
+                Represented at the state-level in <strong>Kabaddi</strong>. Honed peak physical conditioning, discipline, tactical split-second decision making, and team cohesion under intense competitive pressure—values carried directly into fast-paced engineering teams.
+              </p>
+            </div>
+          </article>
+
+          <!-- 3. SATI Media & Photography Team -->
+          <article class="achievement-card reveal" aria-label="Achievement: SATI Media Team Volunteer">
+            <div class="achievement-card__visual">
+              <img class="achievement-card__img" src="assets/images/project-creative.jpg" alt="SATI Media and Photography team visual production" width="280" height="200" loading="lazy" />
+            </div>
+            <div class="achievement-card__body">
+              <div class="achievement-card__badge">
+                <span aria-hidden="true">🎨</span> Creative Volunteer
+              </div>
+              <h3 class="achievement-card__title">SATI Media &amp; Photography Team</h3>
+              <p class="achievement-card__desc">
+                Volunteered as core visual creator on the Media &amp; Photography Team at SATI. Designed promotional event posters, digital orientation campaigns, and produced edited video content with tailored visual effects and transitions for college-wide engagement.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════════
+         SECTION 7 — CONTACT & WORKING EMAIL FORM
+    ════════════════════════════════════════════ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Connect &amp; Collaborate</p>
+          <h2 class="section-title" id="contact-heading">Get In Touch</h2>
+          <p class="section-subtitle">Send a real message directly to my inbox — fully functional and verified</p>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__links reveal">
+            <h3 class="contact__links-title">Direct Channels</h3>
+
+            <!-- Direct Email -->
+            <a class="contact-link" href="mailto:patidargovind0605@gmail.com" aria-label="Send direct email to Govind Patidar">
+              <span class="contact-link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <span class="contact-link__text">
+                <span class="contact-link__label">Direct Email</span>
+                <span class="contact-link__value">patidargovind0605@gmail.com</span>
+              </span>
+            </a>
+
+            <!-- Institution -->
+            <div class="contact-link contact-link--static">
+              <span class="contact-link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <span class="contact-link__text">
+                <span class="contact-link__label">Location &amp; College</span>
+                <span class="contact-link__value">SATI, Vidisha, Madhya Pradesh, India</span>
+              </span>
+            </div>
+
+            <!-- GitHub -->
+            <a class="contact-link" href="https://github.com/patidargovind?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub Profile and Repositories">
+              <span class="contact-link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </span>
+              <span class="contact-link__text">
+                <span class="contact-link__label">GitHub Repositories</span>
+                <span class="contact-link__value">github.com/patidargovind</span>
+              </span>
+            </a>
+
+            <!-- Sent Messages History Box -->
+            <div class="sent-log-box" id="sent-log-box" style="display:none;">
+              <div class="sent-log-box__header">
+                <span class="sent-log-box__badge">✓ Delivery Log</span>
+                <span class="sent-log-box__count" id="sent-log-count">1 message sent</span>
+              </div>
+              <div class="sent-log-box__body" id="sent-log-body">
+                <!-- Dynamically populated with sent message entries -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Working Email Form -->
+          <div class="contact__form-wrap reveal reveal--delay-1">
+            <form class="contact-form" id="contact-form" novalidate aria-label="Contact form to send email to Govind Patidar">
+              <div class="contact-form__status-bar">
+                <span class="status-indicator"></span>
+                <span>Live Email Dispatcher Active (Zero Spam, Instant Delivery)</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Your Full Name <span class="form-label__required" aria-label="required">*</span></label>
+                <input class="form-input" id="contact-name" name="name" type="text" autocomplete="name" required minlength="2" placeholder="e.g. Vikram Sharma" aria-describedby="contact-name-error" />
+                <span class="form-error" id="contact-name-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Your Email Address <span class="form-label__required" aria-label="required">*</span></label>
+                <input class="form-input" id="contact-email" name="email" type="email" autocomplete="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="you@organization.com" aria-describedby="contact-email-error" />
+                <span class="form-error" id="contact-email-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Subject / Inquiry Type</label>
+                <input class="form-input" id="contact-subject" name="subject" type="text" placeholder="e.g. Project Inquiry, Internship or Collaboration" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-message">Message <span class="form-label__required" aria-label="required">*</span></label>
+                <textarea class="form-input form-input--textarea" id="contact-message" name="message" rows="5" required minlength="10" placeholder="Type your message here. It will be delivered directly to Govind Patidar's inbox." aria-describedby="contact-message-error"></textarea>
+                <span class="form-error" id="contact-message-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <button class="btn btn--primary btn--full" type="submit" id="contact-submit">
+                <span class="btn__text">Send Message Now</span>
+                <svg class="btn__icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+              </button>
+
+              <div class="contact-form__feedback" id="contact-feedback" aria-live="polite" role="status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__name">Govind Patidar</p>
+        <p class="footer__tagline">"Building Secure Systems with Code, Voice AI &amp; Creative Design."</p>
+        <p class="footer__sub">B.Tech CSE (Cyber Security) · SATI Vidisha · Class of 2029</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <ul class="footer__links" role="list">
+          <li><a class="footer__link" href="#about">About</a></li>
+          <li><a class="footer__link" href="#education">Education</a></li>
+          <li><a class="footer__link" href="#skills">Skills</a></li>
+          <li><a class="footer__link" href="#projects">Projects &amp; Demos</a></li>
+          <li><a class="footer__link" href="#achievements">Achievements</a></li>
+          <li><a class="footer__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <p class="footer__copy">
+        &copy; <span id="footer-year"></span> Govind Patidar. All interactive demos and email delivery functional.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back-to-top button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top" title="Back to top" hidden>
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+
+  <!-- ════════════════════════════════════════════
+       INTERACTIVE LIVE DEMO MODAL CONTAINER
+  ════════════════════════════════════════════ -->
+  <div class="modal-backdrop" id="demo-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-window">
+      <div class="modal-window__header">
+        <div class="modal-window__titles">
+          <span class="modal-window__tag" id="demo-modal-tag">Interactive Demo</span>
+          <h2 class="modal-window__title" id="demo-modal-title">Project Demo</h2>
+        </div>
+        <button class="modal-close-btn" id="demo-modal-close" aria-label="Close demo window">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <div class="modal-window__content" id="demo-modal-body">
+        <!-- Injected dynamically by script.js depending on selected demo -->
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════════
+       SOURCE CODE VIEWER MODAL CONTAINER
+  ════════════════════════════════════════════ -->
+  <div class="modal-backdrop" id="code-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-window modal-window--code">
+      <div class="modal-window__header">
+        <div class="modal-window__titles">
+          <span class="modal-window__tag">Source Code Inspector</span>
+          <h2 class="modal-window__title" id="code-modal-title">File Source</h2>
+        </div>
+        <div class="modal-window__actions">
+          <button class="btn btn--sm btn--outline" id="code-copy-btn">
+            <svg class="btn__icon btn__icon--left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span id="copy-btn-text">Copy Code</span>
+          </button>
+          <button class="modal-close-btn" id="code-modal-close" aria-label="Close code window">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="code-viewer-container">
+        <pre class="code-block"><code id="code-modal-snippet"></code></pre>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════════
+       GOOGLE GEMINI AI ASSISTANT CHAT MODAL
+  ════════════════════════════════════════════ -->
+  <div class="modal-backdrop" id="ai-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-window modal-window--ai">
+      <div class="modal-window__header">
+        <div class="modal-window__titles">
+          <span class="modal-window__tag modal-window__tag--ai">✨ Google Gemini Platform</span>
+          <h2 class="modal-window__title">Govind's AI Assistant</h2>
+        </div>
+        <button class="modal-close-btn" id="ai-modal-close" aria-label="Close AI chat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <div class="ai-chat-container">
+        <div class="ai-chat-apikey-row">
+          <label class="ai-key-label" for="gemini-key-input">Free Gemini API Key (Optional):</label>
+          <div class="ai-key-input-wrap">
+            <input type="password" id="gemini-key-input" placeholder="AIzaSy... (Leave blank to use built-in smart AI engine)" class="form-input form-input--sm" />
+            <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer" class="key-help-link">Get Free Key ↗</a>
+          </div>
+        </div>
+
+        <div class="ai-messages" id="ai-messages-list">
+          <div class="ai-msg ai-msg--bot">
+            <p>👋 Hello! I am <strong>Govind Patidar's Portfolio AI Assistant</strong>, powered by Gemini prompt intelligence. Ask me anything about Govind's projects (Home Medicine Portal, CityGens CRM, Twilio/ElevenLabs MCP Voice Agent), his SATI cybersecurity studies, Kabaddi achievements, or design capabilities!</p>
+          </div>
+        </div>
+
+        <form class="ai-input-row" id="ai-chat-form">
+          <input type="text" id="ai-prompt-input" class="form-input" placeholder="Ask about Govind's projects, MCP architecture, or cybersecurity..." required autocomplete="off" />
+          <button type="submit" class="btn btn--primary" id="ai-send-btn">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
